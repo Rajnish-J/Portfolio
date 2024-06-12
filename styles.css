@@ -1,26 +1,47 @@
+@font-face{
+    font-family: Tempsitc;
+    src: url(./Fonts/TEMPSITC.TTF);
+}
+
+@font-face{
+    font-family: josefine;
+    src: url(./Fonts/JosefinSlab-Italic-VariableFont_wght.ttf);
+}
+
+@font-face{
+    font-family: cookie;
+    src: url(./Fonts/Cookie-Regular.ttf);
+}
+
 *{
     box-sizing: border-box;
 }
 
 body{
-    background-color: #343a40;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
 
 .photo{
-    width: 150px;
+    width: 190px;
     clip-path: circle();
     float: right;
 }
 
 h1{
-    color: #219ebc;
+    font-family: Tempsitc;
+    font-size: 5ch;
+    color: #560bad;
 }
 
 h2{
-    color: #bde0fe;
+    color: #415a77;
+    font-size: 4ch;
+    font-family: josefine;
 }
 
 dl{
-    color: #ccd5ae;
+    color: #03045e;
+    font-size: 2.5ch;
+    font-family: cookie;
 }
