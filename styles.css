@@ -9,8 +9,8 @@
 }
 
 @font-face{
-    font-family: cookie;
-    src: url(./Fonts/Cookie-Regular.ttf);
+    font-family: lato;
+    src: url(./Fonts/Lato-LightItalic.ttf);
 }
 
 *{
@@ -23,25 +23,27 @@ body{
 
 
 .photo{
-    width: 190px;
+    width: 200px;
     clip-path: circle();
     float: right;
 }
 
 h1{
     font-family: Tempsitc;
-    font-size: 5ch;
+    font-size: 7ch;
     color: #560bad;
+    z-index: 3;
+    border-radius: 50%;
 }
 
-h2{
+dt{
     color: #415a77;
-    font-size: 4ch;
+    font-size: 2 ch;
     font-family: josefine;
 }
 
-dl{
+dd{
     color: #03045e;
-    font-size: 2.5ch;
-    font-family: cookie;
+    font-size: 2ch;
+    font-family: lato;
 }
