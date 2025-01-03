@@ -1,21 +1,21 @@
-@font-face{
-    font-family: Raleway;
-    src: url("../src/assets/Fonts/Raleway/Raleway-VariableFont_wght.ttf");
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: Raleway;
+  src: url("../src/assets/Fonts/Raleway/Raleway-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face{
-    font-family: IBM;
-    src: url("../src/assets/Fonts/IBM/IBMPlexMono-Bold.ttf");
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: IBM;
+  src: url("../src/assets/Fonts/IBM/IBMPlexMono-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.raleway-font{
-    font-family: Raleway;
+.raleway-font {
+  font-family: Raleway;
 }
 
-.IBM-font{
-    font-family: IBM;
+.IBM-font {
+  font-family: IBM;
 }

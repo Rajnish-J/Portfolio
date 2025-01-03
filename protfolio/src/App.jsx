@@ -1,11 +1,12 @@
 import "./App.css";
+import LandingPage from "./components/LandingPage/LandingPage";
+import Navbar from "../src/components/Navbar/Navbar";
 
 function App() {
-
   return (
     <>
-      <h1 className="raleway-font">Protfolio</h1>
-      <h1 className="IBM-font">Rajnish</h1>
+      <Navbar></Navbar>
+      <LandingPage></LandingPage>
     </>
   );
 }
