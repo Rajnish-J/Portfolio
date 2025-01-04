@@ -21,7 +21,7 @@ function Navbar() {
           </button>
         </div>
         <div className="collapse navbar-collapse px-4" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav" style={{paddingRight: "50px"}}>
             <li className="nav-item list">
               <a
                 className="nav-link active"
