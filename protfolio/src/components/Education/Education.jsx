@@ -10,7 +10,8 @@ function Education() {
   return (
     <div
       className="education-section"
-      style={{ backgroundColor: "white", marginTop: "75px" }}
+      style={{ backgroundColor: "white", marginTop: "162px" }}
+      id="edu"
     >
       <h2 className="edu raleway-font">My Education</h2>
       <VerticalTimeline className="IBM-font" lineColor="black">

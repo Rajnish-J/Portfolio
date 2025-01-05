@@ -28,14 +28,14 @@ function Contact() {
       .then(
         (result) => {
           setStatus("success"); // Set success status
-          form.reset(); // Reset the form after successful submission
+          form.reset();
 
           // Reset status after 3 seconds
           setTimeout(() => setStatus(""), 3000);
         },
         (error) => {
-          setStatus("error"); // Set error status
-          form.reset(); // Reset the form after failed submission
+          setStatus("error");
+          form.reset();
 
           // Reset status after 3 seconds
           setTimeout(() => setStatus(""), 3000);
@@ -44,7 +44,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <p className="raleway-font head">Get in Touch</p>
       <p className="cont IBM-font">
         Hi there! I&apos;d love to hear from you. Whether you have questions or
