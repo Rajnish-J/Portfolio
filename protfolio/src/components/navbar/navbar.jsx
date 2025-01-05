@@ -21,7 +21,7 @@ function Navbar() {
           </button>
         </div>
         <div className="collapse navbar-collapse px-4" id="navbarNav">
-          <ul className="navbar-nav" style={{paddingRight: "50px"}}>
+          <ul className="navbar-nav" style={{ paddingRight: "50px" }}>
             <li className="nav-item list">
               <a
                 className="nav-link active"
@@ -50,24 +50,6 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item list">
-              <a
-                className="nav-link active"
-                href="#"
-                style={{ color: "#9C9C9C" }}
-              >
-                Certification
-              </a>
-            </li>
-            <li className="nav-item list">
-              <a
-                className="nav-link active"
-                href="#"
-                style={{ color: "#9C9C9C" }}
-              >
-                Gallery
-              </a>
-            </li>
-            <li className="nav-item list content-color">
               <a
                 className="nav-link active"
                 href="#"

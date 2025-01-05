@@ -13,7 +13,7 @@ function Education() {
       style={{ backgroundColor: "white", marginTop: "75px" }}
     >
       <h2 className="edu raleway-font">My Education</h2>
-      <VerticalTimeline className="IBM-font">
+      <VerticalTimeline className="IBM-font" lineColor="black">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           contentStyle={{ background: "#f3f4f6", color: "#333" }}
@@ -28,7 +28,7 @@ function Education() {
           <h4 className="vertical-timeline-element-subtitle">
             Panimalar Engineering College
           </h4>
-          <p>Electronics & Communication Engineering, Chennai</p>
+          <p>Electronics & Communication Engineering</p>
         </VerticalTimelineElement>
 
         <VerticalTimelineElement

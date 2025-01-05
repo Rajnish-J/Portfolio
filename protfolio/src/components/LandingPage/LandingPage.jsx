@@ -28,12 +28,15 @@ function LandingPage() {
               experienced professionals, and contribute to impactful software
               solutions in a dynamic work environment.
             </p>
-            <button className="btn btn-lg btn-color" style={{backgroundColor: "#62BA1B"}}>
+            <button
+              className="btn btn-lg btn-color"
+              style={{ backgroundColor: "#62BA1B" }}
+            >
               <a
                 className="IBM-font"
                 href={Resume}
                 target="_blank"
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: "black", textDecoration: "none" }}
               >
                 Get Resume ❤️
               </a>
