@@ -44,97 +44,103 @@ function Contact() {
   };
 
   return (
-    <div className="contact" id="contact">
-      <p className="raleway-font head">Get in Touch</p>
-      <p className="cont IBM-font">
-        Hi there! I&apos;d love to hear from you. Whether you have questions or
-        feedback, <br />
-        feel free to reach out. I’m here to help and will respond as soon as
-        possible!
-      </p>
+    <div className="contact py-5" id="contact">
+      <div className="container">
+        <p className="raleway-font head text-center">Get in Touch</p>
+        <p className="cont IBM-font text-center mb-4">
+          Hi there! I&apos;d love to hear from you. Whether you have questions
+          or feedback, <br />
+          feel free to reach out. I’m here to help and will respond as soon as
+          possible!
+        </p>
 
-      <div className="container mt-5 IBM-font form-div">
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label className="form-label input-css">Name</label>
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label input-css">Email</label>
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label input-css">Message</label>
-            <textarea
-              className="form-control"
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Enter your message"
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="btn button"
-            style={{ backgroundColor: "#62BA1B" }}
-          >
-            Submit
-          </button>
-
-          {status && (
-            <div
-              className={`alert mt-3 ${
-                status === "success" ? "alert-success" : "alert-danger"
-              } fade-in`}
-              role="alert"
-              style={{
-                textAlign: "center",
-                fontSize: "1.2rem",
-                width: "80%",
-                margin: "10px auto",
-                padding: "10px 20px",
-                borderRadius: "5px",
-                opacity: status ? 1 : 0,
-                transition: "opacity 0.5s ease-out",
-              }}
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-8 col-lg-6 IBM-font">
+            <form
+              onSubmit={handleSubmit}
+              className="p-4 bg-white rounded shadow-sm"
             >
-              {status === "success" ? (
-                <>
-                  <span
-                    role="img"
-                    aria-label="success"
-                    style={{ fontSize: "14px" }}
-                  >
-                    Your message has been sent successfully!
-                    <br />
-                    Thank you for reaching out, will get in touch shortly 🎉
-                  </span>
-                </>
-              ) : (
-                <>
-                  <span role="img" aria-label="error">
-                    Something went wrong. Please try again! 😞
-                  </span>
-                </>
+              <div className="mb-3">
+                <label
+                  className="form-label input-css text-dark"
+                  htmlFor="name"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="form-control w-100"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label
+                  className="form-label input-css text-dark"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="form-control w-100"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label
+                  className="form-label input-css text-dark"
+                  htmlFor="message"
+                >
+                  Message
+                </label>
+                <textarea
+                  className="form-control w-100"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="btn button w-100"
+                style={{ backgroundColor: "#62BA1B" }}
+              >
+                Submit
+              </button>
+
+              {status && (
+                <div
+                  className={`alert mt-3 ${
+                    status === "success" ? "alert-success" : "alert-danger"
+                  }`}
+                  role="alert"
+                  style={{
+                    textAlign: "center",
+                    fontSize: "1.2rem",
+                    borderRadius: "5px",
+                  }}
+                >
+                  {status === "success" ? (
+                    <>
+                      Your message has been sent successfully! <br />
+                      Thank you for reaching out. 🎉
+                    </>
+                  ) : (
+                    <>Something went wrong. Please try again! 😞</>
+                  )}
+                </div>
               )}
-            </div>
-          )}
-        </form>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   );

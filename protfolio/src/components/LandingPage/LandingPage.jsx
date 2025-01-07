@@ -2,27 +2,28 @@ import "../LandingPage/LandingPage.css";
 import { TypeAnimation } from "react-type-animation";
 import profilePic from "../../assets/photos/profile/4.jpg";
 import Resume from "../../assets/Certficates/resume/Rajnish_Resume.pdf";
-
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaHackerNews } from "react-icons/fa";
+import codechef from "../../assets/photos/landingpage/codechef.jpg";
+import { FaGithubSquare, FaLinkedin, FaHackerrank } from "react-icons/fa";
 
 function LandingPage() {
+  const handleScrollToSection = (e, targetId) => {
+    e.preventDefault();
+    const targetSection = document.getElementById(targetId);
+    const headerHeight = document.querySelector(".mainDiv")?.offsetHeight || 60;
+
+    if (targetSection) {
+      const targetPosition =
+        targetSection.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: targetPosition - headerHeight,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div
-      className="container-fluid text-white"
-      style={{
-        backgroundColor: "#000",
-        height: "750px",
-        marginBottom: "105px",
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <div
-        className="container"
-        style={{ paddingTop: "40px", paddingLeft: "100px" }}
-      >
+    <div className="container-fluid text-white landing-page">
+      <div className="container">
         <div className="row align-items-center">
           {/* Left Section */}
           <div className="col-md-6 text-center text-md-start">
@@ -42,7 +43,6 @@ function LandingPage() {
                   wrapper="span"
                   speed={50}
                   className="opacity-70 text-2xl"
-                  style={{ fontSize: "", display: "inline-block" }}
                   repeat={Infinity}
                 />
               </span>
@@ -53,14 +53,12 @@ function LandingPage() {
               experienced professionals, and contribute to impactful software
               solutions in a dynamic work environment.
             </p>
-            <button
-              className="btn btn-lg btn-color"
-              style={{ backgroundColor: "#62BA1B" }}
-            >
+            <button className="btn btn-lg" style={{ backgroundColor: "#62BA1B" }}>
               <a
                 className="IBM-font"
                 href={Resume}
                 target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: "black", textDecoration: "none" }}
               >
                 Get Resume ❤️
@@ -68,31 +66,39 @@ function LandingPage() {
             </button>
 
             {/* Social Links with Icons */}
-            <div className="mt-5">
-              <div className="d-flex justify-content-left gap-4">
+            <div className="mt-2">
+              <div className="d-flex justify-content-left gap-2">
                 <a
-                  href="https://www.linkedin.com/in/tshrihari/"
+                  href="https://github.com/Rajnish-J"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-decoration-none text-primary"
                 >
-                  <FaLinkedin size={40} />
+                  <FaGithubSquare size={30} />
                 </a>
                 <a
-                  href="https://www.instagram.com/tshrihari/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-decoration-none text-danger"
-                >
-                  <FaInstagram size={40} />
-                </a>
-                <a
-                  href="https://www.hackerrank.com/tshrihari"
+                  href="https://www.linkedin.com/in/rajnish-j-a749bb248/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-decoration-none text-success"
                 >
-                  <FaHackerNews size={40} />
+                  <FaLinkedin size={30} />
+                </a>
+                <a
+                  href="https://www.codechef.com/users/rajnish10"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-primary"
+                >
+                  <img className="codechef-img" src={codechef} alt="codechef" />
+                </a>
+                <a
+                  href="https://www.hackerrank.com/profile/Rajnish_J"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-danger"
+                >
+                  <FaHackerrank size={30} />
                 </a>
               </div>
             </div>
@@ -100,20 +106,8 @@ function LandingPage() {
 
           {/* Right Section */}
           <div className="col-md-6 text-center">
-            <div
-              style={{
-                width: "400px",
-                height: "400px",
-                borderRadius: "50%",
-                overflow: "hidden",
-                margin: "auto",
-              }}
-            >
-              <img
-                src={profilePic}
-                alt="Profile"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
+            <div className="profile-pic-container">
+              <img src={profilePic} alt="Profile" className="profile-pic" />
             </div>
           </div>
         </div>

@@ -6,12 +6,66 @@
   border-bottom-right-radius: 15px;
 }
 
-.list {
-  margin-left: 60px;
-}
-
 .mainDiv {
   position: fixed;
   width: 100%;
   z-index: 10;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+@media (max-width: 1184px) {
+  .nav-pad {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Default styles for the navbar */
+.navbar {
+  padding: 10px 0;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  color: #9C9C9C;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #62BA1B;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px 20px; /* Adjust padding for mobile */
+  }
+
+  .navbar-toggler {
+    border-color: #62BA1B; /* Set the color of the toggler icon */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #62BA1B; /* Toggler icon color */
+  }
+
+  .navbar-nav {
+    text-align: center; /* Center the nav items */
+  }
+
+  .nav-item {
+    margin: 10px 0; /* Space out the nav items */
+  }
+
+  .nav-link {
+    font-size: 1.2rem; /* Adjust font size for mobile view */
+    padding: 10px; /* Add padding for easier clicking */
+  }
+
+  .mainDiv {
+    width: 100%; /* Ensure the navbar spans the full width */
+  }
 }

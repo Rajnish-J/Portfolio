@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "../src/components/Navbar/Navbar";
+import Navbar from "../src/components/Navbar/Navbar"
 import LandingPage from "./components/LandingPage/LandingPage";
 import Education from "../src/components/Education/Education";
 import Skills from "../src/components/Skills/Skills";
