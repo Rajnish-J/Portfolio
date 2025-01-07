@@ -1,12 +1,12 @@
 import "./App.css";
-import Navbar from "../src/components/Navbar/Navbar"
+import Navbar from "./components/Navbar/navbar";
 import LandingPage from "./components/LandingPage/LandingPage";
-import Education from "../src/components/Education/Education";
-import Skills from "../src/components/Skills/Skills";
-import Projects from "../src/components/Projects/Projects";
-import Certifications from "../src/components/Certifications/Certifications";
-import Contact from "../src/components/Contact/Contact";
-import Footer from "../src/components/Footer/Footer";
+import Education from "./components/Education/Education";
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import Certifications from "./components/Certifications/Certifications";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
