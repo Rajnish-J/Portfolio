@@ -44,7 +44,7 @@ function Education() {
             Higher Secondary Education
           </h3>
           <h4 className="vertical-timeline-element-subtitle">
-            P.A.K. Palanisamy Higher Secondary School, Oldwahsermenpet, Chennai
+            P.A.K. Palanisamy Higher Secondary School, Oldwashermenpet, Chennai
           </h4>
           <p>Computer Science Stream</p>
         </VerticalTimelineElement>
@@ -59,7 +59,7 @@ function Education() {
         >
           <h3 className="vertical-timeline-element-title">SSLC</h3>
           <h4 className="vertical-timeline-element-subtitle">
-            P.A.K. Palanisamy Higher Secondary School, Oldwahsermenpet, Chennai
+            P.A.K. Palanisamy Higher Secondary School, Oldwashermenpet, Chennai
           </h4>
         </VerticalTimelineElement>
       </VerticalTimeline>
