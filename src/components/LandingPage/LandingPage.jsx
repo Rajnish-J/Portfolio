@@ -26,7 +26,7 @@ function LandingPage() {
       <div className="container">
         <div className="row align-items-center">
           {/* Left Section */}
-          <div className="col-md-6 text-center text-md-start">
+          <div className="col-md-6 text-md-start">
             <h1 className="raleway-font">
               Hi, I am Rajnish 👋
               <br />
@@ -47,13 +47,16 @@ function LandingPage() {
                 />
               </span>
             </h1>
-            <p className="IBM-font" style={{ color: "#9C9C9C" }}>
+            <p className="IBM-font text-left" style={{ color: "#9C9C9C" }}>
               Driven IT fresher skilled in Java, JavaScript, and front-end
               development. Committed to continuous growth, eager to learn from
               experienced professionals, and contribute to impactful software
               solutions in a dynamic work environment.
             </p>
-            <button className="btn btn-lg" style={{ backgroundColor: "#62BA1B" }}>
+            <button
+              className="btn btn-lg"
+              style={{ backgroundColor: "#62BA1B" }}
+            >
               <a
                 className="IBM-font"
                 href={Resume}

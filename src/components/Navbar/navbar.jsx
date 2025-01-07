@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <div className="mainDiv">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-5 nav-pad">
+      <nav className="navbar navbar-expand-lg px-5 nav-pad">
         <div className="container-fluid">
           <a
             className="navbar-brand IBM-font"
