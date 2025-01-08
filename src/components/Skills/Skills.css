@@ -7,3 +7,26 @@
   font-size: 2rem;
   margin-bottom: 20px;
 }
+
+/* Add a gradient background */
+.bg-gradient {
+  background: linear-gradient(135deg, #1f3c5b, #3e4b6b);
+}
+
+/* Customize the shadow effects */
+.group:hover .shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.group .group-hover\:opacity-100 {
+  opacity: 0;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.pic {
+  width: 70px;
+  height: 70px;
+}

@@ -30,7 +30,7 @@ function LandingPage() {
             <h1 className="raleway-font">
               Hi, I am Rajnish 👋
               <br />
-              <span style={{ fontSize: "25px", color: "#62BA1B" }}>
+              <span className="text-primary" style={{ fontSize: "25px", color: "#62BA1B" }}>
                 <TypeAnimation
                   sequence={[
                     "FullStack Developer",
@@ -54,7 +54,7 @@ function LandingPage() {
               solutions in a dynamic work environment.
             </p>
             <button
-              className="btn btn-lg"
+              className="btn btn-lg bg-primary"
               style={{ backgroundColor: "#62BA1B" }}
             >
               <a
@@ -64,18 +64,18 @@ function LandingPage() {
                 rel="noopener noreferrer"
                 style={{ color: "black", textDecoration: "none" }}
               >
-                Get Resume ❤️
+                Get Resume
               </a>
             </button>
 
             {/* Social Links with Icons */}
-            <div className="mt-2">
+            <div className="mt-3">
               <div className="d-flex justify-content-left gap-2">
                 <a
                   href="https://github.com/Rajnish-J"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-decoration-none text-primary"
+                  className="text-decoration-none text-light"
                 >
                   <FaGithubSquare size={30} />
                 </a>
@@ -83,7 +83,7 @@ function LandingPage() {
                   href="https://www.linkedin.com/in/rajnish-j-a749bb248/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-decoration-none text-success"
+                  className="text-decoration-none text-primary"
                 >
                   <FaLinkedin size={30} />
                 </a>
@@ -99,7 +99,7 @@ function LandingPage() {
                   href="https://www.hackerrank.com/profile/Rajnish_J"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-decoration-none text-danger"
+                  className="text-decoration-none text-success"
                 >
                   <FaHackerrank size={30} />
                 </a>

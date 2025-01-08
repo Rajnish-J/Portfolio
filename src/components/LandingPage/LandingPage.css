@@ -50,11 +50,11 @@
 
   .profile-pic-container {
     width: 70%;
-    margin-top: 20px; /* Adjusts the profile image further down */
+    margin-top: 50px; /* Adjusts the profile image further down */
   }
 
   .d-flex {
-    justify-content: center; /* Centers the social icons */
+    justify-content: left; /* Centers the social icons */
   }
 
   .btn-color {
