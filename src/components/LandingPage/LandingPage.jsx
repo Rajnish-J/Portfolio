@@ -28,23 +28,17 @@ function LandingPage() {
           {/* Left Section */}
           <div className="col-md-6 text-md-start">
             <h1 className="raleway-font">
-              Hi, I am Rajnish 👋
+              Hi, I am{" "}
+              <TypeAnimation
+                sequence={["Rajnish 👋", 1000]}
+                wrapper="span"
+                speed={50}
+                className="text-primary"
+                repeat={Infinity}
+              />
               <br />
-              <span className="text-primary" style={{ fontSize: "25px", color: "#62BA1B" }}>
-                <TypeAnimation
-                  sequence={[
-                    "FullStack Developer",
-                    1000,
-                    "Frontend Developer",
-                    1000,
-                    "Backend Developer",
-                    1000,
-                  ]}
-                  wrapper="span"
-                  speed={50}
-                  className="opacity-70 text-2xl"
-                  repeat={Infinity}
-                />
+              <span className="text-primary" style={{ fontSize: "25px" }}>
+                FullStack Developer
               </span>
             </h1>
             <p className="IBM-font text-left" style={{ color: "#9C9C9C" }}>

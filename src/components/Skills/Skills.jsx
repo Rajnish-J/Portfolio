@@ -121,11 +121,11 @@ const Skills = () => {
 
   return (
     <section id="skills" className="container my-5">
-      <h5 className="text-primary text-center mb-4 display-4 raleway-font">
+      <h5 className="text-primary text-center mb-4 IBM-font skill-head">
         Skills
       </h5>
 
-      <div className="bg-gradient p-4 rounded border border-primary">
+      <div className="p-4 rounded border border-primary" style={{backgroundColor: "#172452"}}>
         <div className="row">
           {Object.keys(SKILLS).map((category) => (
             <div
@@ -134,15 +134,15 @@ const Skills = () => {
                 category === "Databases" ? "col-md-12" : "col-md-6"
               }`}
             >
-              <h3 className="text-white font-weight-bold mb-4 IBM-font">
-                {category}
+              <h3 className="text-white font-weight-bold mb-5 raleway-font">
+                {category}:
               </h3>
 
               <div className="d-flex flex-wrap justify-content-center">
                 {SKILLS[category].map((skill) => (
                   <div
                     key={skill.name}
-                    className="position-relative group p-2 m-2 rounded shadow-lg hover:shadow-xl transition-shadow"
+                    className="position-relative group p-2 m-2 rounded shadow-lg hover:shadow-xl transition-shadow img-col"
                   >
                     <img src={skill.image} alt={skill.name} className="pic" />
                     <div className="position-absolute left-50 translate-middle-x top-100 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">

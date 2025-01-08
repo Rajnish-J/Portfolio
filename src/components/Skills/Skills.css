@@ -1,3 +1,11 @@
+.skill-head {
+  font-size: 40px;
+}
+
+.img-col{
+  border: 1px white solid;
+}
+
 .skills-cloud-container {
   text-align: center;
   margin: 20px;
