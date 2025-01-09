@@ -1,5 +1,4 @@
 import './Preloader.css';
-import './Preloader.css'; // Ensure the CSS file path is correct
 
 const Preloader = () => {
   return (
