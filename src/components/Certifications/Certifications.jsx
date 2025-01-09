@@ -84,23 +84,14 @@ const MarqueeCardComponent = () => {
             key={index}
             style={{ margin: "0 50px", display: "inline-block" }}
           >
-            <img
-              src={item.image}
-              alt={item.title}
-              style={{
-                width: "543px",
-                height: "408px",
-                objectFit: "cover",
-                marginBottom: "10px",
-              }}
-            />
+            <img src={item.image} alt={item.title} className="cert-image" />
             <h3>{item.title}</h3>
-            <p>
+            <span>
               <strong>Issuer:</strong> {item.issuer}
-            </p>
-            <p>
+            </span>
+            <>
               <strong>Date:</strong> {item.date}
-            </p>
+            </>
             <p
               dangerouslySetInnerHTML={{ __html: item.description }}
               style={{ whiteSpace: "pre-line" }} // Preserves line breaks
