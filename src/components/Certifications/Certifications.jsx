@@ -89,12 +89,12 @@ const MarqueeCardComponent = () => {
             <span>
               <strong>Issuer:</strong> {item.issuer}
             </span>
-            <>
+            <p>
               <strong>Date:</strong> {item.date}
-            </>
+            </p>
             <p
               dangerouslySetInnerHTML={{ __html: item.description }}
-              style={{ whiteSpace: "pre-line" }} // Preserves line breaks
+              style={{ whiteSpace: "pre-line" }}
             />
           </div>
         ))}
