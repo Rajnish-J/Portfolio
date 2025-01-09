@@ -1,4 +1,7 @@
+import { useState, useEffect } from "react";
 import "./App.css";
+
+import Preloader from "./components/Preloader/Preloader";
 import Navbar from "./components/Navbar/navbar";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Education from "./components/Education/Education";
@@ -9,16 +12,29 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const [showPreloader, setShowPreloader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPreloader(false), 4000);
+    return () => clearTimeout(timer); // Clean up the timer
+  }, []);
+
   return (
     <>
-      <Navbar></Navbar>
-      <LandingPage></LandingPage>
-      <Education></Education>
-      <Skills></Skills>
-      <Projects></Projects>
-      <Certifications></Certifications>
-      <Contact></Contact>
-      <Footer></Footer>
+      {showPreloader ? (
+        <Preloader />
+      ) : (
+        <>
+          <Navbar />
+          <LandingPage />
+          <Education />
+          <Skills />
+          <Projects />
+          <Certifications />
+          <Contact />
+          <Footer />
+        </>
+      )}
     </>
   );
 }
