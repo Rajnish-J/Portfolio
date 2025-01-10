@@ -77,10 +77,11 @@ const MarqueeCardComponent = () => {
         reverse={true}
         pauseOnHover={true}
         className="text-dark raleway-font"
-        innerClassName=""
+        innerClassName="marquee-wrapper"
       >
         {contentArray.map((item, index) => (
           <div
+            className="marquee-item"
             key={index}
             style={{ margin: "0 50px", display: "inline-block" }}
           >

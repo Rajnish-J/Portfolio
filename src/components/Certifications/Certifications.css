@@ -9,7 +9,28 @@ img {
   margin-bottom: 10px;
 }
 
-/* Media query for mobile view */
+
+
+.marquee-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  animation-duration: 15s;
+}
+
+.marquee-item {
+  margin-right: 50px;
+}
+
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobile view */
 @media (max-width: 768px) {
   .cert-image {
     width: 271px;
@@ -18,5 +39,5 @@ img {
 
   #certifications p {
     display: none;
-  }
+  } 
 }

@@ -125,16 +125,19 @@ const Skills = () => {
         Skills
       </h5>
 
-      <div className="p-4 rounded border border-primary" style={{backgroundColor: "#172452"}}>
+      <div
+        className="p-4 rounded border border-primary"
+        style={{ backgroundColor: "#172452" }}
+      >
         <div className="row">
           {Object.keys(SKILLS).map((category) => (
             <div
               key={category}
-              className={`col-12 ${
+              className={`mb-3 col-12 ${
                 category === "Databases" ? "col-md-12" : "col-md-6"
               }`}
             >
-              <h3 className="text-white font-weight-bold mb-5 raleway-font">
+              <h3 className="text-white text-center font-weight-bold mb-5 raleway-font">
                 {category}:
               </h3>
 
