@@ -23,7 +23,6 @@
   }
 }
 
-/* Default styles for the navbar */
 .navbar {
   padding: 10px 0;
 }
@@ -41,19 +40,15 @@
 /* Mobile view adjustments */
 @media (max-width: 576px) {
   .navbar {
-    padding: 10px 20px; /* Adjust padding for mobile */
+    padding: 10px 20px;
   }
 
   .navbar-toggler {
-    border-color: #62BA1B; /* Set the color of the toggler icon */
-  }
-
-  .navbar-toggler-icon {
-    background-color: #62BA1B; /* Toggler icon color */
+    border: none;
   }
 
   .navbar-nav {
-    text-align: center; /* Center the nav items */
+    text-align: right; /* Center the nav items */
   }
 
   .nav-item {
