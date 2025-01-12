@@ -9,12 +9,10 @@ img {
   margin-bottom: 10px;
 }
 
-
-
 .marquee-wrapper {
   display: flex;
   flex-wrap: nowrap;
-  animation-duration: 15s;
+  animation-duration: 20s;
 }
 
 .marquee-item {

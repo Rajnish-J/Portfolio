@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => setShowPreloader(false), 4000);
-    return () => clearTimeout(timer); // Clean up the timer
+    return () => clearTimeout(timer);
   }, []);
 
   return (

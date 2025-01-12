@@ -1,4 +1,5 @@
 import "../Navbar/Navbar.css";
+import logo from "../../assets/Logo/image.png";
 
 function Navbar() {
   const handleScrollToContact = (e, target) => {
@@ -25,7 +26,7 @@ function Navbar() {
             href="#"
             style={{ color: "#9C9C9C" }}
           >
-            Home
+            <img src={logo} alt="logo-rajnish" className="logo-rajnish"/>
           </a>
           <button
             className="navbar-toggler"
