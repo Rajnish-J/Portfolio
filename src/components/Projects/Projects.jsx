@@ -3,6 +3,8 @@ import "../Projects/Projects.css";
 import pic1 from "../../assets/photos/projects/pic1.jpg";
 import pic2 from "../../assets/photos/projects/pic2.png";
 
+import { VscGithubAlt } from "react-icons/vsc";
+
 const Projects = () => {
   const projects = [
     {
@@ -27,7 +29,7 @@ const Projects = () => {
       githubLink: "https://github.com/Rajnish-J/GuessNumber",
       demoLink: "https://guezz-the-number.netlify.app/",
       description:
-        "Interactive 'Guess My Number' game built with React and Bootstrap, featuring responsive design, dynamic feedback, and a highscore tracker for an engaging user experience.",
+        "Interactive 'Guess My Number' game built with React and Bootstrap, featuring responsive design, dynamic feedback and a highscore tracker for an engaging user experience.",
       image: pic2,
     },
   ];
@@ -60,33 +62,38 @@ const Projects = () => {
               key={index}
               className={`carousel-item ${index === 0 ? "active" : ""}`}
             >
+              {/* Set image size */}
               <img
                 src={project.image}
                 className="d-block w-100"
                 alt={project.title}
+                style={{ width: "800px", height: "800px", margin: "0 auto" }} // Added styling for 800x800 size
               />
               <div className="carousel-caption d-none d-md-block">
                 <h2>{project.title}</h2>
                 <div>
                   {project.technologies.map((tech, idx) => (
                     <span key={idx} className="badge m-1 tech-div">
-                      {tech}
+                      <div>{tech}</div>
                     </span>
                   ))}
                 </div>
-                <p>{project.description}</p>
+                <p className="desc">{project.description}</p>
                 <a
                   href={project.githubLink}
-                  className="btn btn-primary"
+                  className="btn btn-primary code"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub
+                  <div>
+                    <VscGithubAlt />
+                  </div>
+                  <div>GitHub</div>
                 </a>
                 {project.demoLink && (
                   <a
                     href={project.demoLink}
-                    className="btn btn-secondary ms-2"
+                    className="btn btn-primary ms-2 demo"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -104,7 +111,10 @@ const Projects = () => {
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
           <span className="visually-hidden">Previous</span>
         </button>
         <button
@@ -113,7 +123,10 @@ const Projects = () => {
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
           <span className="visually-hidden">Next</span>
         </button>
       </div>

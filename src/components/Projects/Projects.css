@@ -5,7 +5,33 @@
 
 .tech-div {
   font-size: 16px;
-  background-color: #0d6efd;
+  background-color: rgb(13, 110, 253, 0.8);
   height: 30px;
   width: 100px;
+}
+
+.carousel-caption {
+  margin-top: 20px; /* Add space between the image and content */
+}
+
+.desc {
+  margin-top: 5px;
+}
+
+.code {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.code div {
+  margin-right: 5px; /* Adjust space between icon and text */
+}
+
+.demo {
+  width: 80px;
+  height: 50px;
+  display: flex;
 }
