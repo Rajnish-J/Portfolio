@@ -10,7 +10,7 @@ function Education() {
   return (
     <div
       className="education-section"
-      style={{ backgroundColor: "white", marginTop: "162px" }}
+      style={{ backgroundColor: "white", marginTop: "162px", marginBottom: "200px" }}
       id="edu"
     >
       <h2 className="edu raleway-font">My Education</h2>
