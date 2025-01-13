@@ -4,6 +4,7 @@ import pic1 from "../../assets/photos/projects/pic1.jpg";
 import pic2 from "../../assets/photos/projects/pic2.png";
 
 import { VscGithubAlt } from "react-icons/vsc";
+import { CiShare1 } from "react-icons/ci";
 
 const Projects = () => {
   const projects = [
@@ -36,7 +37,6 @@ const Projects = () => {
 
   return (
     <div id="projects" className="main-div">
-      {/* Link to project section in Navbar */}
       <div
         id="carouselExampleIndicators"
         className="carousel slide bg-white"
@@ -62,19 +62,17 @@ const Projects = () => {
               key={index}
               className={`carousel-item ${index === 0 ? "active" : ""}`}
             >
-              {/* Set image size */}
               <img
                 src={project.image}
-                className="d-block w-100"
+                className="d-block w-100 img-cont"
                 alt={project.title}
-                style={{ width: "800px", height: "800px", margin: "0 auto" }} // Added styling for 800x800 size
               />
               <div className="carousel-caption d-none d-md-block">
-                <h2>{project.title}</h2>
-                <div>
+                <span className="proj-title">{project.title}</span>
+                <div className="tech-main-div">
                   {project.technologies.map((tech, idx) => (
                     <span key={idx} className="badge m-1 tech-div">
-                      <div>{tech}</div>
+                      <div className="tech">{tech}</div>
                     </span>
                   ))}
                 </div>
@@ -85,10 +83,12 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div>
-                    <VscGithubAlt />
+                  <div className="git-logo">
+                    <div>
+                      <VscGithubAlt />
+                    </div>
+                    <div>View Source</div>
                   </div>
-                  <div>GitHub</div>
                 </a>
                 {project.demoLink && (
                   <a
@@ -97,7 +97,12 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Demo
+                    <div className="view">
+                      <div>
+                        <CiShare1 />
+                      </div>
+                      <div>Live Demo</div>
+                    </div>
                   </a>
                 )}
               </div>

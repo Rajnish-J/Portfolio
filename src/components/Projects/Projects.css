@@ -1,5 +1,5 @@
 .main-div {
-  margin-top: 300px;
+  margin-top: 150px;
   margin-bottom: 150px;
 }
 
@@ -10,28 +10,54 @@
   width: 100px;
 }
 
+.tech{
+  margin-top: 5px;
+}
+
+.proj-title {
+  font-size: 50px;
+}
+
+.tech-main-div {
+  margin-top: 5px;
+}
+
+.img-cont {
+  height: 800px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.view {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+}
+
 .carousel-caption {
-  margin-top: 20px; /* Add space between the image and content */
+  margin-top: 20px;
 }
 
 .desc {
   margin-top: 5px;
+  font-size: 20px;
 }
 
 .code {
-  width: 80px;
+  width: 150px;
   height: 50px;
+}
+
+.git-logo {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.code div {
-  margin-right: 5px; /* Adjust space between icon and text */
+  margin-top: 5px;
 }
 
 .demo {
-  width: 80px;
+  width: 150px;
   height: 50px;
   display: flex;
 }
