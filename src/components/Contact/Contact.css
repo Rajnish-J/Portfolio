@@ -89,6 +89,7 @@
   .form-mob {
     height: 420px;
     width: 380px;
+    margin-left: 4px;
   }
 
   #name {
