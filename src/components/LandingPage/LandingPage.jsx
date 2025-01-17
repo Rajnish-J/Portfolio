@@ -41,7 +41,7 @@ function LandingPage() {
                 FullStack Developer
               </span>
             </h1>
-            <p className="IBM-font text-left" style={{ color: "#9C9C9C" }}>
+            <p className="raleway-font text-left abt-cont">
               Driven IT fresher skilled in Java, JavaScript, and front-end
               development. Committed to continuous growth, eager to learn from
               experienced professionals, and contribute to impactful software

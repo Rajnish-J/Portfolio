@@ -21,6 +21,11 @@
     margin-left: -30px;
     margin-right: -30px;
   }
+
+  .nav-logo {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 .navbar {
@@ -29,23 +34,22 @@
 
 .navbar-nav .nav-link {
   font-size: 1rem;
-  color: #9C9C9C;
+  color: #9c9c9c;
   transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #62BA1B;
+  color: #62ba1b;
 }
 
 /* Mobile view adjustments */
 @media (max-width: 576px) {
-
-  .nav-logo{
+  .nav-logo {
     height: 30px;
     width: 30px;
   }
 
-  .logo-rajnish{
+  .logo-rajnish {
     border: none;
     width: 20px;
     height: 20px;
@@ -77,7 +81,7 @@
   }
 }
 
-.logo-rajnish{
+.logo-rajnish {
   border: none;
   width: 50px;
   height: 50px;

@@ -3,10 +3,10 @@ import emailjs from "emailjs-com";
 import "../Contact/Contact.css";
 
 function Contact() {
-  const [status, setStatus] = useState(""); // to manage the success or error message
+  const [status, setStatus] = useState("");
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // prevent default form submission
+    event.preventDefault();
 
     // Get form values explicitly
     const form = event.target;
@@ -58,7 +58,7 @@ function Contact() {
           <div className="col-12 col-md-8 col-lg-6 IBM-font">
             <form
               onSubmit={handleSubmit}
-              className="p-4 bg-white rounded shadow-sm"
+              className="p-4 bg-white rounded shadow-sm form-mob"
             >
               <div className="mb-3">
                 <label

@@ -7,6 +7,11 @@
   display: flex;
 }
 
+.abt-cont {
+  text-align: justify;
+  color: white;
+}
+
 .codechef-img {
   height: 30px;
   width: 30px;
@@ -40,6 +45,11 @@
     height: auto;
     padding: 100px;
     display: block;
+  }
+
+  .abt-cont {
+    text-align: left;
+    color: white;
   }
 
   .container {

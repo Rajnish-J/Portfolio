@@ -121,7 +121,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="container my-5">
-      <h5 className="text-primary text-center mb-4 IBM-font skill-head">
+      <h5 className="text-primary text-center mb-4 raleway-font skill-head">
         Skills
       </h5>
 

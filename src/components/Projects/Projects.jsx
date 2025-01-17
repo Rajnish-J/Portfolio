@@ -37,7 +37,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="main-div">
-      <h5 className="text-primary text-center mb-4 IBM-font pro-head">
+      <h5 className="text-primary text-center mb-4 raleway-font pro-head">
         Projects
       </h5>
       <div

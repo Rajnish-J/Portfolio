@@ -76,3 +76,38 @@
   text-align: center;
   padding: 15px;
 }
+
+@media (max-width: 576px) {
+  .head {
+    font-size: 25px;
+  }
+
+  .cont {
+    font-size: 14px;
+  }
+
+  .form-mob {
+    height: 420px;
+    width: 380px;
+  }
+
+  #name {
+    font-size: 15px;
+  }
+
+  #email {
+    font-size: 15px;
+  }
+
+  #message {
+    font-size: 15px;
+  }
+
+  .button {
+    font-size: 15px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+}
