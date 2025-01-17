@@ -73,7 +73,7 @@ const Skills = () => {
     ],
     Backend: [
       {
-        name: "RestApi",
+        name: "RestAPI",
         image: Rest,
       },
       {
@@ -87,7 +87,7 @@ const Skills = () => {
     ],
     Tools: [
       {
-        name: "VsCode",
+        name: "VSCode",
         image: VScode,
       },
       {
@@ -95,7 +95,7 @@ const Skills = () => {
         image: Postman,
       },
       {
-        name: "Git",
+        name: "GIT",
         image: GIT,
       },
       {
@@ -103,17 +103,17 @@ const Skills = () => {
         image: Eclipse,
       },
       {
-        name: "Intelij",
+        name: "IntelijIdea",
         image: Intelij,
       },
     ],
     Databases: [
       {
-        name: "Mysql",
+        name: "MySQL",
         image: Mysql,
       },
       {
-        name: "mongodb",
+        name: "MongoDB",
         image: mongodb,
       },
     ],
@@ -148,7 +148,7 @@ const Skills = () => {
                     className="position-relative group p-2 m-2 rounded shadow-lg hover:shadow-xl transition-shadow img-col"
                   >
                     <img src={skill.image} alt={skill.name} className="pic" />
-                    <div className="position-absolute left-50 translate-middle-x top-100 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="position-absolute left-50 translate-middle-x top-100 mt-2 group-hover:opacity-100 transition-opacity">
                       <span className="text-white bg-black text-sm py-1 px-2 rounded shadow-md">
                         {skill.name}
                       </span>

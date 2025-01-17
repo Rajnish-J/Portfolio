@@ -18,8 +18,8 @@
 
 @media (max-width: 1184px) {
   .nav-pad {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: -30px;
+    margin-right: -30px;
   }
 }
 
@@ -40,6 +40,11 @@
 /* Mobile view adjustments */
 @media (max-width: 576px) {
 
+  .nav-logo{
+    height: 30px;
+    width: 30px;
+  }
+
   .logo-rajnish{
     border: none;
     width: 20px;
@@ -55,20 +60,20 @@
   }
 
   .navbar-nav {
-    text-align: right; /* Center the nav items */
+    text-align: right;
   }
 
   .nav-item {
-    margin: 10px 0; /* Space out the nav items */
+    margin: 10px 0;
   }
 
   .nav-link {
-    font-size: 1.2rem; /* Adjust font size for mobile view */
-    padding: 10px; /* Add padding for easier clicking */
+    font-size: 1.2rem;
+    padding: 10px;
   }
 
   .mainDiv {
-    width: 100%; /* Ensure the navbar spans the full width */
+    width: 100%;
   }
 }
 

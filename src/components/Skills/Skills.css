@@ -41,3 +41,60 @@
     font-size: 30px;
   }
 }
+
+/* Ensure the hover effect works by positioning and opacity changes */
+.position-absolute {
+  position: absolute;
+  z-index: 10;
+}
+
+.left-50 {
+  left: 50%;
+}
+
+.translate-middle-x {
+  transform: translateX(-50%);
+}
+
+.top-100 {
+  top: 100%;
+}
+
+.group-hover\:opacity-100 {
+  opacity: 0;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.pic {
+  width: 70px;
+  height: 70px;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.group:hover .pic {
+  transform: scale(1.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hover\:shadow-xl {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.group:hover .hover\:shadow-xl {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+}

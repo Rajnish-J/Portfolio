@@ -1,5 +1,6 @@
 import "../Navbar/Navbar.css";
 import logo from "../../assets/Logo/image.png";
+import nav from "../../assets/photos/nav/menu-bar.png";
 
 function Navbar() {
   const handleScrollToContact = (e, target) => {
@@ -26,7 +27,7 @@ function Navbar() {
             href="#"
             style={{ color: "#9C9C9C" }}
           >
-            <img src={logo} alt="logo-rajnish" className="logo-rajnish"/>
+            <img src={logo} alt="logo-rajnish" className="logo-rajnish" />
           </a>
           <button
             className="navbar-toggler"
@@ -37,7 +38,7 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <img src={nav} alt="nav" className="nav-logo" />
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
