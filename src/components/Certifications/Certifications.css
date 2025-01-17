@@ -2,6 +2,11 @@ img {
   border: 2px black solid;
 }
 
+.cer-head {
+  font-size: 40px;
+  font-weight: bold;
+}
+
 .cert-image {
   width: 543px;
   height: 408px;
@@ -35,7 +40,12 @@ img {
     height: 204px;
   }
 
+  .cer-head {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
   #certifications p {
     display: none;
-  } 
+  }
 }

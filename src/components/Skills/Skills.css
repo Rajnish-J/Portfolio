@@ -35,3 +35,9 @@
   height: 70px;
   border: none;
 }
+
+@media (max-width: 768px) {
+  .skill-head {
+    font-size: 30px;
+  }
+}

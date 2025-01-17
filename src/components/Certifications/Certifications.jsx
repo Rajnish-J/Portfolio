@@ -71,6 +71,9 @@ const MarqueeCardComponent = () => {
         boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
       }}
     >
+      <h5 className="text-primary text-center mb-3 raleway-font cer-head">
+        Certifications
+      </h5>
       <Marquee
         fade={true}
         direction="left"

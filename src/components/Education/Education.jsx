@@ -10,10 +10,13 @@ function Education() {
   return (
     <div
       className="education-section"
-      style={{ backgroundColor: "white", marginTop: "162px", marginBottom: "200px" }}
+      style={{
+        backgroundColor: "white",
+        marginBottom: "200px",
+      }}
       id="edu"
     >
-      <h2 className="edu raleway-font">My Education</h2>
+      <h2 className="edu raleway-font text-primary">My Education</h2>
       <VerticalTimeline className="IBM-font" lineColor="black">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
