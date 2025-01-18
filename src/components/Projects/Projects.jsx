@@ -70,44 +70,82 @@ const Projects = () => {
                 className="d-block w-100 img-cont"
                 alt={project.title}
               />
-              <div className="carousel-caption d-none d-md-block">
-                <span className="proj-title">{project.title}</span>
-                <div className="tech-main-div">
-                  {project.technologies.map((tech, idx) => (
-                    <span key={idx} className="badge m-1 tech-div">
-                      <div className="tech">{tech}</div>
-                    </span>
-                  ))}
-                </div>
-                <p className="desc">{project.description}</p>
-                <a
-                  href={project.githubLink}
-                  className="btn btn-primary code"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="git-logo">
-                    <div>
-                      <VscGithubAlt />
-                    </div>
-                    <div>View Source</div>
+              <div className="carousel-caption">
+                {/* Mobile View */}
+                <div className="mobile-only">
+                  <span className="proj-title">{project.title}</span>
+                  <div className="d-flex justify-content-center gap-3 mt-1">
+                    <a
+                      href={project.githubLink}
+                      className="btn btn-primary code"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="git-logo">
+                        <div>
+                          <VscGithubAlt />
+                        </div>
+                        <div>View Source</div>
+                      </div>
+                    </a>
+                    {project.demoLink && (
+                      <a
+                        href={project.demoLink}
+                        className="btn btn-primary demo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="view">
+                          <div>
+                            <CiShare1 />
+                          </div>
+                          <div>Live Demo</div>
+                        </div>
+                      </a>
+                    )}
                   </div>
-                </a>
-                {project.demoLink && (
+                </div>
+
+                {/* Desktop View */}
+                <div className="desktop-only">
+                  <span className="proj-title">{project.title}</span>
+                  <div className="tech-main-div">
+                    {project.technologies.map((tech, idx) => (
+                      <span key={idx} className="badge m-1 tech-div">
+                        <div className="tech">{tech}</div>
+                      </span>
+                    ))}
+                  </div>
+                  <p className="desc">{project.description}</p>
                   <a
-                    href={project.demoLink}
-                    className="btn btn-primary ms-2 demo"
+                    href={project.githubLink}
+                    className="btn btn-primary code"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="view">
+                    <div className="git-logo">
                       <div>
-                        <CiShare1 />
+                        <VscGithubAlt />
                       </div>
-                      <div>Live Demo</div>
+                      <div>View Source</div>
                     </div>
                   </a>
-                )}
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      className="btn btn-primary ms-2 demo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="view">
+                        <div>
+                          <CiShare1 />
+                        </div>
+                        <div>Live Demo</div>
+                      </div>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
