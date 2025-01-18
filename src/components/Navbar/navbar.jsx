@@ -5,6 +5,7 @@ import nav from "../../assets/photos/nav/menu-bar.png";
 
 function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(""); // New state for active link
   const navbarTogglerRef = useRef(null);
 
   const handleScrollToContact = (e, target) => {
@@ -24,7 +25,7 @@ function Navbar() {
       });
     }
 
-    // Close the navbar after scrolling
+    setActiveLink(target); // Update active link state
     setIsNavbarOpen(false);
   };
 
@@ -45,6 +46,16 @@ function Navbar() {
     }
   };
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    setActiveLink(""); // Reset active link
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setIsNavbarOpen(false);
+  };
+
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     return () => {
@@ -60,6 +71,7 @@ function Navbar() {
             className="navbar-brand IBM-font"
             href="#"
             style={{ color: "#9C9C9C" }}
+            onClick={handleLogoClick}
           >
             <img src={logo} alt="logo-rajnish" className="logo-rajnish" />
           </a>
@@ -81,7 +93,7 @@ function Navbar() {
             <ul className="navbar-nav ms-auto">
               <li className="nav-item IBM-font">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${activeLink === "edu" ? "active" : ""}`}
                   href="#"
                   style={{ color: "#9C9C9C" }}
                   onClick={(e) => handleScrollToContact(e, "edu")}
@@ -91,7 +103,9 @@ function Navbar() {
               </li>
               <li className="nav-item IBM-font">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeLink === "skills" ? "active" : ""
+                  }`}
                   href="#"
                   style={{ color: "#9C9C9C" }}
                   onClick={(e) => handleScrollToContact(e, "skills")}
@@ -101,7 +115,9 @@ function Navbar() {
               </li>
               <li className="nav-item IBM-font">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeLink === "projects" ? "active" : ""
+                  }`}
                   href="#"
                   style={{ color: "#9C9C9C" }}
                   onClick={(e) => handleScrollToContact(e, "projects")}
@@ -111,7 +127,9 @@ function Navbar() {
               </li>
               <li className="nav-item IBM-font">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeLink === "certifications" ? "active" : ""
+                  }`}
                   href="#"
                   style={{ color: "#9C9C9C" }}
                   onClick={(e) => handleScrollToContact(e, "certifications")}
@@ -121,7 +139,9 @@ function Navbar() {
               </li>
               <li className="nav-item IBM-font">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeLink === "contact" ? "active" : ""
+                  }`}
                   href="#"
                   style={{ color: "#9C9C9C" }}
                   onClick={(e) => handleScrollToContact(e, "contact")}

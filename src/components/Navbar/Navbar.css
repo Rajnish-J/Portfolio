@@ -89,3 +89,7 @@
   height: 50px;
   margin-top: 5px;
 }
+
+.navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+}
