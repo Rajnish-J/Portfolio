@@ -10,7 +10,10 @@ function Navbar() {
   const handleScrollToContact = (e, target) => {
     e.preventDefault();
     const contactSection = document.getElementById(target);
-    const headerHeight = document.querySelector(".mainDiv")?.offsetHeight || 75;
+
+    // Adjust offset based on screen width
+    const isMobileView = window.innerWidth <= 576;
+    const headerHeight = isMobileView ? 80 : 75;
 
     if (contactSection) {
       const contactSectionTop =
@@ -20,6 +23,9 @@ function Navbar() {
         behavior: "smooth",
       });
     }
+
+    // Close the navbar after scrolling
+    setIsNavbarOpen(false);
   };
 
   const toggleNavbar = () => {
