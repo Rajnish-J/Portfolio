@@ -1,8 +1,12 @@
+import { useState, useEffect, useRef } from "react";
 import "../Navbar/Navbar.css";
 import logo from "../../assets/Logo/image.png";
 import nav from "../../assets/photos/nav/menu-bar.png";
 
 function Navbar() {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const navbarTogglerRef = useRef(null);
+
   const handleScrollToContact = (e, target) => {
     e.preventDefault();
     const contactSection = document.getElementById(target);
@@ -18,6 +22,30 @@ function Navbar() {
     }
   };
 
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (
+      isNavbarOpen &&
+      navbarTogglerRef.current &&
+      !navbarTogglerRef.current.contains(event.target)
+    ) {
+      const navbar = document.querySelector(".navbar-collapse");
+      if (navbar && !navbar.contains(event.target)) {
+        setIsNavbarOpen(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isNavbarOpen]);
+
   return (
     <div className="mainDiv">
       <nav className="navbar navbar-expand-lg px-5 nav-pad">
@@ -32,15 +60,18 @@ function Navbar() {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
+            ref={navbarTogglerRef}
+            onClick={toggleNavbar}
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={isNavbarOpen}
             aria-label="Toggle navigation"
           >
             <img src={nav} alt="nav" className="nav-logo" />
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div
+            className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`}
+            id="navbarNav"
+          >
             <ul className="navbar-nav ms-auto">
               <li className="nav-item IBM-font">
                 <a
