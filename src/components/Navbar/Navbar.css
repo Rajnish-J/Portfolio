@@ -25,6 +25,7 @@
   .nav-logo {
     height: 30px;
     width: 30px;
+    border: none;
   }
 }
 
@@ -47,6 +48,7 @@
   .nav-logo {
     height: 30px;
     width: 30px;
+    border: none;
   }
 
   .logo-rajnish {
