@@ -67,7 +67,7 @@ const Skills = () => {
         image: MaterialUI,
       },
       {
-        name: "ES6",
+        name: "EcmaScript6",
         image: Es6,
       },
     ],
@@ -121,7 +121,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="container my-5">
-      <h5 className="text-primary text-center mb-4 raleway-font skill-head">
+      <h5 className="text-primary text-center mb-4 mont-font skill-head">
         Skills
       </h5>
 
@@ -137,7 +137,7 @@ const Skills = () => {
                 category === "Databases" ? "col-md-12" : "col-md-6"
               }`}
             >
-              <h3 className="text-white text-center font-weight-bold mb-5 raleway-font">
+              <h3 className="text-white text-center font-weight-bold mb-5 mont-font">
                 {category}:
               </h3>
 

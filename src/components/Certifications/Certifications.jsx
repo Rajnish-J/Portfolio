@@ -71,7 +71,7 @@ const MarqueeCardComponent = () => {
         boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
       }}
     >
-      <h5 className="text-primary text-center mb-3 raleway-font cer-head">
+      <h5 className="text-primary text-center mb-3 mont-font cer-head">
         Certifications
       </h5>
       <Marquee
@@ -79,7 +79,7 @@ const MarqueeCardComponent = () => {
         direction="left"
         reverse={true}
         pauseOnHover={true}
-        className="text-dark raleway-font"
+        className="text-dark mont-font"
         innerClassName="marquee-wrapper"
       >
         {contentArray.map((item, index) => (
@@ -91,10 +91,12 @@ const MarqueeCardComponent = () => {
             <img src={item.image} alt={item.title} className="cert-image" />
             <h3>{item.title}</h3>
             <span>
-              <strong>Issuer:</strong> {item.issuer}
+              <strong>Issuer:</strong>{" "}
+              <span className="mont-font-light">{item.issuer}</span>
             </span>
             <p>
-              <strong>Date:</strong> {item.date}
+              <strong>Date:</strong>{" "}
+              <span className="mont-font-light">{item.date}</span>
             </p>
             <p
               dangerouslySetInnerHTML={{ __html: item.description }}

@@ -64,11 +64,11 @@ function Navbar() {
   }, [isNavbarOpen]);
 
   return (
-    <div className="mainDiv">
+    <div className="mainDiv mont-font">
       <nav className="navbar navbar-expand-lg px-5 nav-pad">
         <div className="container-fluid">
           <a
-            className="navbar-brand IBM-font"
+            className="navbar-brand mont-font"
             href="#"
             style={{ color: "#9C9C9C" }}
             onClick={handleLogoClick}
@@ -91,7 +91,7 @@ function Navbar() {
             id="navbarNav"
           >
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item IBM-font">
+              <li className="nav-item">
                 <a
                   className={`nav-link ${activeLink === "edu" ? "active" : ""}`}
                   href="#"
@@ -101,7 +101,7 @@ function Navbar() {
                   Education
                 </a>
               </li>
-              <li className="nav-item IBM-font">
+              <li className="nav-item mont-font">
                 <a
                   className={`nav-link ${
                     activeLink === "skills" ? "active" : ""
@@ -113,7 +113,7 @@ function Navbar() {
                   Skills
                 </a>
               </li>
-              <li className="nav-item IBM-font">
+              <li className="nav-item mont-font">
                 <a
                   className={`nav-link ${
                     activeLink === "projects" ? "active" : ""
@@ -125,7 +125,7 @@ function Navbar() {
                   Projects
                 </a>
               </li>
-              <li className="nav-item IBM-font">
+              <li className="nav-item mont-font">
                 <a
                   className={`nav-link ${
                     activeLink === "certifications" ? "active" : ""
@@ -137,7 +137,7 @@ function Navbar() {
                   Certifications
                 </a>
               </li>
-              <li className="nav-item IBM-font">
+              <li className="nav-item mont-font">
                 <a
                   className={`nav-link ${
                     activeLink === "contact" ? "active" : ""

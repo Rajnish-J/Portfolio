@@ -37,7 +37,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="main-div">
-      <h5 className="text-primary text-center raleway-font pro-head">
+      <h5 className="text-primary text-center mont-font pro-head">
         Projects
       </h5>
       <div
@@ -59,7 +59,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="carousel-inner raleway-font">
+        <div className="carousel-inner mont-font">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -116,7 +116,7 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <p className="desc">{project.description}</p>
+                  <p className="desc mont-font-light">{project.description}</p>
                   <a
                     href={project.githubLink}
                     className="btn btn-primary code"

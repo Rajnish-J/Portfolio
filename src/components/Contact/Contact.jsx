@@ -46,16 +46,14 @@ function Contact() {
   return (
     <div className="contact py-5" id="contact">
       <div className="container">
-        <p className="raleway-font head text-center">Get in Touch</p>
-        <p className="cont IBM-font text-center mb-4">
-          Hi there! I&apos;d love to hear from you. Whether you have questions
-          or feedback, <br />
-          feel free to reach out. I’m here to help and will respond as soon as
-          possible!
+        <p className="ralemont-font head text-center">Get in Touch</p>
+        <p className="cont mont-font text-center mb-4">
+          Feel free to reach out if you have any questions, project inquiries,
+          or collaboration opportunities.
         </p>
 
         <div className="row justify-content-center">
-          <div className="col-12 col-md-8 col-lg-6 IBM-font">
+          <div className="col-12 col-md-8 col-lg-6 mont-font">
             <form
               onSubmit={handleSubmit}
               className="p-4 bg-white rounded shadow-sm form-mob"

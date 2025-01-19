@@ -27,7 +27,7 @@ function LandingPage() {
         <div className="row align-items-center">
           {/* Left Section */}
           <div className="col-md-6 text-md-start">
-            <h1 className="raleway-font">
+            <h1 className="mont-font">
               Hi, I am{" "}
               <TypeAnimation
                 sequence={["Rajnish 👋", 1000]}
@@ -41,7 +41,7 @@ function LandingPage() {
                 FullStack Developer
               </span>
             </h1>
-            <p className="raleway-font text-left abt-cont">
+            <p className="mont-font-light text-left abt-cont">
               Driven IT fresher skilled in Java, JavaScript, and front-end
               development. Committed to continuous growth, eager to learn from
               experienced professionals, and contribute to impactful software
@@ -52,7 +52,7 @@ function LandingPage() {
               style={{ backgroundColor: "#62BA1B" }}
             >
               <a
-                className="IBM-font"
+                className="mont-font"
                 href={Resume}
                 target="_blank"
                 rel="noopener noreferrer"

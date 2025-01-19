@@ -16,8 +16,8 @@ function Education() {
       }}
       id="edu"
     >
-      <h2 className="edu raleway-font text-primary">My Education</h2>
-      <VerticalTimeline className="IBM-font" lineColor="black">
+      <h2 className="edu mont-font text-primary">My Education</h2>
+      <VerticalTimeline className="mont-font-light" lineColor="black">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           contentStyle={{ background: "#f3f4f6", color: "#333" }}

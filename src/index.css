@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Mont;
+  src: url("../src/assets/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .raleway-font {
   font-family: Raleway;
 }
@@ -20,6 +27,16 @@
   font-family: IBM;
 }
 
-body{
+.mont-font {
+  font-family: Mont;
+  font-weight: bold;
+}
+
+.mont-font-light {
+  font-family: Mont;
+  font-weight: normal;
+}
+
+body {
   background-color: #1c2430 !important;
 }

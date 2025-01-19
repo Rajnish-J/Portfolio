@@ -25,7 +25,8 @@ function App() {
         <Preloader />
       ) : (
         <>
-          <Navbar />
+          <Navbar 
+          />
           <LandingPage />
           <Education />
           <Skills />
