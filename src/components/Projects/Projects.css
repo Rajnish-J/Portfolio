@@ -10,14 +10,21 @@
 }
 
 .tech-div {
-  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
   background-color: rgb(13, 110, 253, 0.8);
-  height: 30px;
-  width: 100px;
+  color: white;
+  text-align: center;
+}
+
+.tech-div:hover {
+  background-color: rgb(10, 85, 200, 0.9); /* Add a hover effect */
 }
 
 .tech {
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .proj-title {

@@ -11,12 +11,15 @@ const Projects = () => {
     {
       title: "Hospify",
       technologies: [
-        "React",
-        "Spring Boot",
-        "MySql",
-        "Rest API",
-        "Spring Web",
-        "Bootstrap",
+        { name: "React", link: "https://react.dev/" },
+        { name: "Spring Boot", link: "https://spring.io/projects/spring-boot" },
+        { name: "MySQL", link: "https://www.mysql.com/" },
+        { name: "Rest API", link: "https://restfulapi.net/" },
+        {
+          name: "Spring Web",
+          link: "https://docs.spring.io/spring-framework/docs/current/reference/html/web.html",
+        },
+        { name: "Bootstrap", link: "https://getbootstrap.com/" },
       ],
       githubLink: "https://github.com/Rajnish-J/Hospify---Training-project",
       demoLink: "",
@@ -26,7 +29,15 @@ const Projects = () => {
     },
     {
       title: "Guess My Number",
-      technologies: ["React", "Bootstrap", "CSS", "Vite"],
+      technologies: [
+        { name: "React", link: "https://react.dev/" },
+        { name: "Bootstrap", link: "https://getbootstrap.com/" },
+        {
+          name: "CSS",
+          link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        },
+        { name: "Vite", link: "https://vitejs.dev/" },
+      ],
       githubLink: "https://github.com/Rajnish-J/GuessNumber",
       demoLink: "https://guezz-the-number.netlify.app/",
       description:
@@ -37,9 +48,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="main-div">
-      <h5 className="text-primary text-center mont-font pro-head">
-        Projects
-      </h5>
+      <h5 className="text-primary text-center mont-font pro-head">Projects</h5>
       <div
         id="carouselExampleIndicators"
         className="carousel slide bg-white"
@@ -111,9 +120,13 @@ const Projects = () => {
                   <span className="proj-title">{project.title}</span>
                   <div className="tech-main-div">
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="badge m-1 tech-div">
-                        <div className="tech">{tech}</div>
-                      </span>
+                      <button
+                        key={idx}
+                        className="badge m-1 tech-div btn bg-primary"
+                        onClick={() => window.open(tech.link, "_blank")}
+                      >
+                        <div className="tech">{tech.name}</div>
+                      </button>
                     ))}
                   </div>
                   <p className="desc mont-font-light">{project.description}</p>
