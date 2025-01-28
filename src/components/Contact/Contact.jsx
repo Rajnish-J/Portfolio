@@ -19,11 +19,12 @@ function Contact() {
         "service_ksq8p6f",
         "template_x1myf98",
         {
-          name,
+          from_name: name,
           email,
           message,
+          reply_to: email, // Add reply_to field
         },
-        "4nlB2gcdxXfIrPrXq"
+        "4nlB2gcdxXfIrPrXq" // Replace with your public API key
       )
       .then(
         (result) => {
