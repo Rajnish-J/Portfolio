@@ -140,6 +140,18 @@ function Navbar() {
               <li className="nav-item mont-font">
                 <a
                   className={`nav-link ${
+                    activeLink === "blog" ? "active" : ""
+                  }`}
+                  href="#"
+                  style={{ color: "#9C9C9C" }}
+                  onClick={(e) => handleScrollToContact(e, "blog")}
+                >
+                  Blog
+                </a>
+              </li>
+              <li className="nav-item mont-font">
+                <a
+                  className={`nav-link ${
                     activeLink === "contact" ? "active" : ""
                   }`}
                   href="#"
