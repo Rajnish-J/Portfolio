@@ -65,3 +65,10 @@
 .see-more a:hover {
   background-color: #1c2430;
 }
+
+@media (max-width: 576px){
+
+    .main-blog-card img{
+        margin: 0px;
+    }
+}
