@@ -1,25 +1,100 @@
 import "../LandingPage/LandingPage.css";
+import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import CountUp from "react-countup";
 import profilePic from "../../assets/photos/profile/4.jpg";
 import Resume from "../../assets/Certficates/resume/Rajnish_Resume.pdf";
 import codechef from "../../assets/photos/landingpage/codechef.jpg";
 import { FaGithubSquare, FaLinkedin, FaHackerrank } from "react-icons/fa";
+import axios from "axios";
+
+const GITHUB_ACCESS = import.meta.env.VITE_GITHUB_ACCESS;
+const GITHUB_USERNAME = "Rajnish-J";
+const DEVTO_USERNAME = "rajnishjaisankar";
 
 function LandingPage() {
-  const handleScrollToSection = (e, targetId) => {
-    e.preventDefault();
-    const targetSection = document.getElementById(targetId);
-    const headerHeight = document.querySelector(".mainDiv")?.offsetHeight || 60;
+  const [githubCommits, setGithubCommits] = useState(0);
+  const [devBlogs, setDevBlogs] = useState(0);
 
-    if (targetSection) {
-      const targetPosition =
-        targetSection.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: targetPosition - headerHeight,
-        behavior: "smooth",
-      });
+  useEffect(() => {
+    async function fetchGithubStats() {
+      try {
+        const reposResponse = await fetch(
+          `https://api.github.com/users/${GITHUB_USERNAME}/repos`,
+          {
+            headers: {
+              Authorization: `Bearer ${GITHUB_ACCESS}`,
+              Accept: "application/vnd.github.v3+json",
+            },
+          }
+        );
+
+        if (!reposResponse.ok) {
+          throw new Error("Failed to fetch repositories");
+        }
+
+        const repos = await reposResponse.json();
+        let totalCommits = 0;
+
+        const commitPromises = repos.map(async (repo) => {
+          try {
+            const commitsUrl = repo.commits_url.replace("{/sha}", "");
+            const commitsResponse = await fetch(commitsUrl, {
+              headers: {
+                Authorization: `Bearer ${GITHUB_ACCESS}`,
+                Accept: "application/vnd.github.v3+json",
+              },
+            });
+
+            if (commitsResponse.ok) {
+              const commits = await commitsResponse.json();
+              return commits.length;
+            }
+          } catch (error) {
+            console.error(`Error fetching commits for ${repo.name}:`, error);
+          }
+          return 0;
+        });
+
+        const commitCounts = await Promise.all(commitPromises);
+        totalCommits = commitCounts.reduce((sum, count) => sum + count, 0);
+
+        setGithubCommits(totalCommits);
+      } catch (error) {
+        console.error("Error in GitHub stats API:", error);
+        setGithubCommits(0);
+      }
     }
-  };
+
+    async function fetchDevBlogs() {
+      try {
+        let allBlogs = [];
+        let page = 1;
+        let hasMore = true;
+
+        while (hasMore) {
+          const response = await axios.get(
+            `https://dev.to/api/articles?username=${DEVTO_USERNAME}&page=${page}&per_page=10`
+          );
+
+          if (response.data.length > 0) {
+            allBlogs = [...allBlogs, ...response.data];
+            page++;
+          } else {
+            hasMore = false;
+          }
+        }
+
+        setDevBlogs(allBlogs.length);
+      } catch (error) {
+        console.error("Error fetching Dev.to blogs:", error);
+        setDevBlogs(0);
+      }
+    }
+
+    fetchGithubStats();
+    fetchDevBlogs();
+  }, []);
 
   return (
     <div className="container-fluid text-white landing-page">
@@ -98,6 +173,32 @@ function LandingPage() {
                   <FaHackerrank size={30} />
                 </a>
               </div>
+            </div>
+
+            {/* Stats Section with CountUp Animation */}
+            <div className="mt-4 d-flex mont-font">
+              <p>
+                <span className="fw-bold text-primary">
+                  <CountUp
+                    start={0}
+                    end={githubCommits}
+                    duration={8}
+                    separator=","
+                  />
+                </span>{" "}
+                : GitHub Commits
+              </p>
+              <p className="mx-4">
+                <span className="fw-bold text-primary">
+                  <CountUp
+                    start={0}
+                    end={devBlogs}
+                    duration={2}
+                    separator=","
+                  />
+                </span>{" "}
+                : Blogs Posted
+              </p>
             </div>
           </div>
 
