@@ -176,41 +176,35 @@ function LandingPage() {
               </div>
             </div>
 
-            {/* Stats Section with CountUp Animation */}
-            <div className="mt-4 d-flex mont-font">
-              <p>
-                <span className="fw-bold text-primary">
-                  <CountUp
-                    start={0}
-                    end={githubCommits}
-                    duration={8}
-                    separator=","
-                  />
-                </span>{" "}
-                : GitHub Commits
-              </p>
-              <p className="mx-4">
-                <span className="fw-bold text-primary">
-                  <CountUp
-                    start={0}
-                    end={devBlogs}
-                    duration={2}
-                    separator=","
-                  />
-                </span>{" "}
-                : Blogs Posted
-              </p>
-              <p className="mx-4">
-                <span className="fw-bold text-primary">
-                  <CountUp
-                    start={0}
-                    end={problemsSolved}
-                    duration={5}
-                    separator=","
-                  />
-                </span>{" "}
-                : Problems Solved
-              </p>
+            {/* Stats Section for PC & Mobile */}
+            <div className="mt-4 d-flex flex-wrap justify-content-center text-center mont-font stats-container">
+              <div className="stat-box">
+                <CountUp
+                  className="text-primary"
+                  start={0}
+                  end={devBlogs}
+                  duration={3}
+                />
+                <p>Blogs Posted</p>
+              </div>
+              <div className="stat-box">
+                <CountUp
+                  className="text-primary"
+                  start={0}
+                  end={problemsSolved}
+                  duration={3}
+                />
+                <p>Problems Solved</p>
+              </div>
+              <div className="stat-box">
+                <CountUp
+                  className="text-primary"
+                  start={0}
+                  end={githubCommits}
+                  duration={3}
+                />
+                <p>Code Commits</p>
+              </div>
             </div>
           </div>
 
