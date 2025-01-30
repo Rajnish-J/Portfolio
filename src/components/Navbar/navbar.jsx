@@ -5,7 +5,7 @@ import nav from "../../assets/photos/nav/menu-bar.png";
 
 function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState(""); // New state for active link
+  const [activeLink, setActiveLink] = useState("");
   const navbarTogglerRef = useRef(null);
 
   const handleScrollToContact = (e, target) => {
@@ -25,7 +25,7 @@ function Navbar() {
       });
     }
 
-    setActiveLink(target); // Update active link state
+    setActiveLink(target);
     setIsNavbarOpen(false);
   };
 
@@ -48,7 +48,7 @@ function Navbar() {
 
   const handleLogoClick = (e) => {
     e.preventDefault();
-    setActiveLink(""); // Reset active link
+    setActiveLink("");
     window.scrollTo({
       top: 0,
       behavior: "smooth",

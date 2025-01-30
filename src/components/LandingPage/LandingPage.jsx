@@ -15,6 +15,7 @@ const DEVTO_USERNAME = "rajnishjaisankar";
 function LandingPage() {
   const [githubCommits, setGithubCommits] = useState(0);
   const [devBlogs, setDevBlogs] = useState(0);
+  const [problemsSolved] = useState(1120);
 
   useEffect(() => {
     async function fetchGithubStats() {
@@ -198,6 +199,17 @@ function LandingPage() {
                   />
                 </span>{" "}
                 : Blogs Posted
+              </p>
+              <p className="mx-4">
+                <span className="fw-bold text-primary">
+                  <CountUp
+                    start={0}
+                    end={problemsSolved}
+                    duration={5}
+                    separator=","
+                  />
+                </span>{" "}
+                : Problems Solved
               </p>
             </div>
           </div>

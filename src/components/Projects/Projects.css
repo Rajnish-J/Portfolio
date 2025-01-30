@@ -1,4 +1,3 @@
-/* Main Container */
 .main-div {
   margin-top: 150px;
   margin-bottom: 150px;
@@ -19,7 +18,7 @@
 }
 
 .tech-div:hover {
-  background-color: rgb(10, 85, 200, 0.9); /* Add a hover effect */
+  background-color: rgb(10, 85, 200, 0.9);
 }
 
 .tech {
@@ -93,9 +92,9 @@
   }
 
   .img-cont {
-    height: 300px; /* Adjusted for mobile view */
+    height: 300px;
     width: 100%;
-    object-fit: cover; /* Ensures uniformity */
+    object-fit: cover;
   }
 
   .desktop-only {

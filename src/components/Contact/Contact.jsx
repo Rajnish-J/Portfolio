@@ -22,23 +22,20 @@ function Contact() {
           from_name: name,
           email,
           message,
-          reply_to: email, // Add reply_to field
+          reply_to: email,
         },
-        "4nlB2gcdxXfIrPrXq" // Replace with your public API key
+        "4nlB2gcdxXfIrPrXq"
       )
       .then(
         (result) => {
-          setStatus("success"); // Set success status
+          setStatus("success");
           form.reset();
 
-          // Reset status after 3 seconds
           setTimeout(() => setStatus(""), 3000);
         },
         (error) => {
           setStatus("error");
           form.reset();
-
-          // Reset status after 3 seconds
           setTimeout(() => setStatus(""), 3000);
         }
       );
