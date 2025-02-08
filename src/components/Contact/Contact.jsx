@@ -42,7 +42,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact py-5" id="contact">
+    <div className="contact py-1" id="contact">
       <div className="container">
         <p className="ralemont-font head text-center">Get in Touch</p>
         <p className="cont mont-font text-center mb-4">

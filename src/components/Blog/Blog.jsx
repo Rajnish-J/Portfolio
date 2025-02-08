@@ -2,6 +2,7 @@ import "./Blog.css";
 
 import img1 from "../../assets/Blogs/img1.png";
 import img2 from "../../assets/Blogs/img2.jpg";
+import img3 from "../../assets/Blogs/img3.jpg";
 
 import { CiShare1 } from "react-icons/ci";
 
@@ -24,14 +25,13 @@ const Blog = () => {
       image: img2,
       url: "https://dev.to/rajnishjaisankar/learning-while-building-the-best-way-to-master-coding-2p83",
     },
-    // {
-    //   id: 3,
-    //   title:
-    //     "Consectures Content Velitpato officia consequat duis enim velit mollit",
-    //   date: "Jul 20, 2022",
-    //   image: "https://via.placeholder.com/100x80",
-    //   url: "/blog/blog2",
-    // },
+    {
+      id: 3,
+      title: "The Rise of Low-Code & No-Code: Should Developers Be Worried?",
+      date: "Feb 08, 2025",
+      image: img3,
+      url: "https://dev.to/rajnishjaisankar/the-rise-of-low-code-no-code-should-developers-be-worried-4ghh",
+    },
     // {
     //   id: 4,
     //   title:
@@ -101,7 +101,7 @@ const Blog = () => {
             <div>
               <CiShare1 />
             </div>
-            <div className="mx-2">See More</div>
+            <div className="mx-2">View More</div>
           </div>
         </a>
       </div>

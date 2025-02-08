@@ -2,6 +2,7 @@ import "../Projects/Projects.css";
 
 import pic1 from "../../assets/photos/projects/pic1.jpg";
 import pic2 from "../../assets/photos/projects/pic2.png";
+import pic3 from "../../assets/photos/projects/pic3.jpg";
 
 import { VscGithubAlt } from "react-icons/vsc";
 import { CiShare1 } from "react-icons/ci";
@@ -24,8 +25,9 @@ const Projects = () => {
       githubLink: "https://github.com/Rajnish-J/Hospify---Training-project",
       demoLink: "",
       description:
-        "I developed a hospital appointment management system from the patient side using Spring for the backend and React for the frontend. The application allows patients to easily book, view, and manage appointments with healthcare providers.",
+        "A hospital appointment management system built with React and Spring Boot, allowing patients to book and manage appointments.",
       image: pic1,
+      textColor: "white", // Custom text color
     },
     {
       title: "Guess My Number",
@@ -41,8 +43,23 @@ const Projects = () => {
       githubLink: "https://github.com/Rajnish-J/GuessNumber",
       demoLink: "https://guezz-the-number.netlify.app/",
       description:
-        "Interactive 'Guess My Number' game built with React and Bootstrap, featuring responsive design, dynamic feedback and a highscore tracker for an engaging user experience.",
+        "An interactive number guessing game with a responsive UI, dynamic feedback, and a high score tracker.",
       image: pic2,
+      textColor: "white",
+    },
+    {
+      title: "Google Calendar - Clone",
+      technologies: [
+        { name: "React", link: "https://react.dev/" },
+        { name: "Vite", link: "https://vitejs.dev/" },
+        { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+      ],
+      githubLink: "https://github.com/Rajnish-J/Calendar-Clone",
+      demoLink: "https://calendarmate.netlify.app/",
+      description:
+        "A Google Calendar clone with event management, a responsive UI, and an intuitive user experience.",
+      image: pic3,
+      textColor: "black",
     },
   ];
 
@@ -54,8 +71,9 @@ const Projects = () => {
         className="carousel slide bg-white"
         data-bs-ride="carousel"
       >
+        {/* Carousel Indicators */}
         <div className="carousel-indicators">
-          {projects.map((project, index) => (
+          {projects.map((_, index) => (
             <button
               key={index}
               type="button"
@@ -68,6 +86,7 @@ const Projects = () => {
           ))}
         </div>
 
+        {/* Carousel Items */}
         <div className="carousel-inner mont-font">
           {projects.map((project, index) => (
             <div
@@ -82,7 +101,12 @@ const Projects = () => {
               <div className="carousel-caption">
                 {/* Mobile View */}
                 <div className="mobile-only">
-                  <span className="proj-title">{project.title}</span>
+                  <span
+                    className="proj-title"
+                    style={{ color: project.textColor }}
+                  >
+                    {project.title}
+                  </span>
                   <div className="d-flex justify-content-center gap-3 mt-1">
                     <a
                       href={project.githubLink}
@@ -91,9 +115,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       <div className="git-logo">
-                        <div>
-                          <VscGithubAlt />
-                        </div>
+                        <VscGithubAlt />
                         <div>View Source</div>
                       </div>
                     </a>
@@ -105,9 +127,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                       >
                         <div className="view">
-                          <div>
-                            <CiShare1 />
-                          </div>
+                          <CiShare1 />
                           <div>Live Demo</div>
                         </div>
                       </a>
@@ -117,7 +137,12 @@ const Projects = () => {
 
                 {/* Desktop View */}
                 <div className="desktop-only">
-                  <span className="proj-title">{project.title}</span>
+                  <span
+                    className="proj-title"
+                    style={{ color: project.textColor }}
+                  >
+                    {project.title}
+                  </span>
                   <div className="tech-main-div">
                     {project.technologies.map((tech, idx) => (
                       <button
@@ -129,7 +154,12 @@ const Projects = () => {
                       </button>
                     ))}
                   </div>
-                  <p className="desc mont-font-light">{project.description}</p>
+                  <p
+                    className="desc mont-font-light"
+                    style={{ color: project.textColor }}
+                  >
+                    {project.description}
+                  </p>
                   <a
                     href={project.githubLink}
                     className="btn btn-primary code"
@@ -137,9 +167,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                   >
                     <div className="git-logo">
-                      <div>
-                        <VscGithubAlt />
-                      </div>
+                      <VscGithubAlt />
                       <div>View Source</div>
                     </div>
                   </a>
@@ -151,9 +179,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       <div className="view">
-                        <div>
-                          <CiShare1 />
-                        </div>
+                        <CiShare1 />
                         <div>Live Demo</div>
                       </div>
                     </a>
@@ -164,6 +190,7 @@ const Projects = () => {
           ))}
         </div>
 
+        {/* Carousel Controls */}
         <button
           className="carousel-control-prev"
           type="button"
