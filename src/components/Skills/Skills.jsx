@@ -11,11 +11,14 @@ import Bootstrap from "../../assets/photos/skills/bootstrap.png";
 import Tailwind from "../../assets/photos/skills/tailwind.png";
 import Es6 from "../../assets/photos/skills/es6.png";
 import MaterialUI from "../../assets/photos/skills/mui.png";
+import TypeScript from "../../assets/photos/skills/ts.svg";
+
 import Node from "../../assets/photos/skills/node-js.png";
-
 import SpringBoot from "../../assets/photos/skills/springboot.png";
-import mongodb from "../../assets/photos/skills/mongodb.png";
+import Rest from "../../assets/photos/skills/rest_api.png";
+import fastapi from "../../assets/photos/skills/fastapi.png";
 
+import mongodb from "../../assets/photos/skills/mongodb.png";
 import Mysql from "../../assets/photos/skills/mysql.png";
 
 import VScode from "../../assets/photos/skills/vscode.png";
@@ -23,7 +26,6 @@ import Intelij from "../../assets/photos/skills/intelij.png";
 import GIT from "../../assets/photos/skills/git.png";
 import Postman from "../../assets/photos/skills/postman.png";
 import Eclipse from "../../assets/photos/skills/eclipse.png";
-import Rest from "../../assets/photos/skills/rest_api.png";
 
 const Skills = () => {
   const SKILLS = {
@@ -70,6 +72,10 @@ const Skills = () => {
         name: "EcmaScript6",
         image: Es6,
       },
+      {
+        name: "TypeScript",
+        image: TypeScript
+      }
     ],
     Backend: [
       {
@@ -84,6 +90,10 @@ const Skills = () => {
         name: "Spring",
         image: SpringBoot,
       },
+      {
+        name: "FastAPI",
+        image: fastapi,
+      }
     ],
     Tools: [
       {

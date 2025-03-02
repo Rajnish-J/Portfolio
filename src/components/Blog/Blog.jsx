@@ -1,8 +1,9 @@
 import "./Blog.css";
 
-import img1 from "../../assets/Blogs/img1.png";
-import img2 from "../../assets/Blogs/img2.jpg";
-import img3 from "../../assets/Blogs/img3.jpg";
+import API from "../../assets/Blogs/API.png";
+import learningWhileCoding from "../../assets/Blogs/learning-while-coding.jpg";
+import riseOfLowCode from "../../assets/Blogs/rise-of-low-code.jpg";
+import browserUse from "../../assets/Blogs/browser-use.png";
 
 import { CiShare1 } from "react-icons/ci";
 
@@ -12,7 +13,7 @@ const Blog = () => {
       id: 1,
       title: "The Power of APIs in Modern Software Development",
       date: "Jan 26, 2025",
-      image: img1,
+      image: API,
       url: "https://dev.to/rajnishjaisankar/the-power-of-apis-in-modern-software-development-5cf6",
     },
   ];
@@ -22,24 +23,24 @@ const Blog = () => {
       id: 2,
       title: "Learning While Building: The Best Way to Master Coding",
       date: "Jan 29, 2025",
-      image: img2,
+      image: learningWhileCoding,
       url: "https://dev.to/rajnishjaisankar/learning-while-building-the-best-way-to-master-coding-2p83",
     },
     {
       id: 3,
       title: "The Rise of Low-Code & No-Code: Should Developers Be Worried?",
       date: "Feb 08, 2025",
-      image: img3,
+      image: riseOfLowCode,
       url: "https://dev.to/rajnishjaisankar/the-rise-of-low-code-no-code-should-developers-be-worried-4ghh",
     },
-    // {
-    //   id: 4,
-    //   title:
-    //     "Consectures Content Velitpato officia consequat duis enim velit mollit",
-    //   date: "Jul 20, 2022",
-    //   image: "https://via.placeholder.com/100x80",
-    //   url: "/blog/blog3",
-    // },
+    {
+      id: 4,
+      title:
+        "Exploring Browser Use Agent: The Future of AI-Powered Web Automation",
+      date: "March 02, 2025",
+      image: browserUse,
+      url: "https://dev.to/rajnishjaisankar/exploring-browser-use-agent-the-future-of-ai-powered-web-automation-3gkd",
+    },
   ];
 
   return (
@@ -79,7 +80,17 @@ const Blog = () => {
           {sideBlogs.map((blog) => (
             <div key={blog.id} className="small-blog">
               <a href={blog.url} target="_blank" rel="noopener noreferrer">
-                <img src={blog.image} alt={`Blog ${blog.id}`} />
+                <img
+                  src={blog.image}
+                  alt={`Blog ${blog.id}`}
+                  style={{
+                    width: "250px",
+                    height: "160px",
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                    marginLeft: "20px",
+                  }}
+                />
               </a>
               <div>
                 <p className="blog-date text-primary">{blog.date}</p>
