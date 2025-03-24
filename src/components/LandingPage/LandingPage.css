@@ -34,7 +34,7 @@
   width: 80%;
   max-width: 400px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 49% 51% 50% 50% / 48% 46% 54% 52% ;
   overflow: hidden;
   margin: auto;
 }

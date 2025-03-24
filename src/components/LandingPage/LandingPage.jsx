@@ -2,7 +2,7 @@ import "../LandingPage/LandingPage.css";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import CountUp from "react-countup";
-import profilePic from "../../assets/photos/profile/img.jpg";
+import profilePic from "../../assets/photos/profile/new.png";
 import Resume from "../../assets/Certficates/resume/Rajnish_Resume.pdf";
 import codechef from "../../assets/photos/landingpage/codechef.jpg";
 import { FaGithubSquare, FaLinkedin, FaHackerrank } from "react-icons/fa";
