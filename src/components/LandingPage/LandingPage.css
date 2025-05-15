@@ -45,6 +45,12 @@
   object-fit: cover;
 }
 
+.leet-icon{
+  border: none;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
 @media (max-width: 576px) {
   .landing-page {
     height: auto;

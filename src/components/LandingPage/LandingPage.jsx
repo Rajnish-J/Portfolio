@@ -5,6 +5,7 @@ import CountUp from "react-countup";
 import profilePic from "../../assets/photos/profile/new.png";
 import Resume from "../../assets/Certficates/resume/Rajnish_Resume.pdf";
 import codechef from "../../assets/photos/landingpage/codechef.jpg";
+import Leetcode from "../../assets/photos/landingpage/leetcode.png"
 import { FaGithubSquare, FaLinkedin, FaHackerrank } from "react-icons/fa";
 import axios from "axios";
 
@@ -172,6 +173,14 @@ function LandingPage() {
                   className="text-decoration-none text-success"
                 >
                   <FaHackerrank size={30} />
+                </a>
+                <a
+                  href="https://leetcode.com/u/Rajnish_2002/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-success"
+                >
+                  <img src={Leetcode} alt="leetcode png" className="leet-icon" />
                 </a>
               </div>
             </div>
